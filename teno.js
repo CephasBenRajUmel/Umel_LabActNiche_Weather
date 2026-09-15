@@ -10,7 +10,7 @@ async function getWeather(){
     try{
         const url = 
         "/.netlify/functions/weather" + 
-        "&q=" + encodeURIComponent(city);
+        "?q=" + encodeURIComponent(city);
 
         const response = await fetch(url);
         const data = await response.json();
