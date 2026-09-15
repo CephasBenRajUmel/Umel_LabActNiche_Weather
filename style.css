@@ -1,0 +1,349 @@
+/* =========================
+   Global
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    color: #f5f3ff;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.25), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(91, 33, 182, 0.25), transparent 30%),
+        linear-gradient(135deg, #080510, #110820 50%, #080510);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+header {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    margin-bottom: 30px;
+
+    background: linear-gradient(
+        90deg,
+        #c084fc,
+        #a855f7,
+        #818cf8
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+/* =========================
+   Search Bar
+========================= */
+
+#search_bar {
+    width: min(500px, 100%);
+
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+#input_bar {
+    flex: 1;
+
+    padding: 15px 18px;
+
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 14px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+
+    color: white;
+
+    font-size: 1rem;
+
+    transition: 0.25s ease;
+}
+
+#input_bar::placeholder {
+    color: #aaa0bd;
+}
+
+#input_bar:focus {
+    border-color: #a855f7;
+
+    box-shadow:
+        0 0 0 3px rgba(168, 85, 247, 0.15),
+        0 0 25px rgba(168, 85, 247, 0.15);
+}
+
+
+/* =========================
+   Search Button
+========================= */
+
+button {
+    padding: 0 22px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #9333ea,
+        #7c3aed
+    );
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(124, 58, 237, 0.3);
+
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    background: linear-gradient(
+        135deg,
+        #a855f7,
+        #8b5cf6
+    );
+
+    box-shadow:
+        0 12px 30px rgba(168, 85, 247, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   Weather Card
+========================= */
+
+#card {
+    width: min(500px, 100%);
+
+    padding: 35px;
+
+    text-align: center;
+
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45),
+        0 0 50px rgba(124, 58, 237, 0.08);
+
+    transition: transform 0.3s ease;
+}
+
+#card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   Location
+========================= */
+
+#location {
+    font-size: 1.6rem;
+
+    margin-bottom: 15px;
+
+    color: #f5f3ff;
+}
+
+
+/* =========================
+   Weather Icon
+========================= */
+
+#weather_icon {
+    width: 110px;
+    height: 110px;
+
+    object-fit: contain;
+
+    margin: 5px 0 5px;
+
+    filter:
+        drop-shadow(0 8px 15px rgba(168, 85, 247, 0.3));
+}
+
+
+/* =========================
+   Temperature
+========================= */
+
+#temperature {
+    font-size: 4.5rem;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    margin: 10px 0;
+
+    background: linear-gradient(
+        180deg,
+        #ffffff,
+        #c4b5fd
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+/* =========================
+   Condition
+========================= */
+
+#condition {
+    color: #b9aecb;
+
+    font-size: 1.1rem;
+
+    text-transform: capitalize;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   Weather Details
+========================= */
+
+.details {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.details p {
+    color: #9185a3;
+
+    font-size: 0.8rem;
+
+    margin-bottom: 7px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+.details strong {
+    display: block;
+
+    color: #e9d5ff;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    header {
+        font-size: 1.7rem;
+    }
+
+    #search_bar {
+        flex-direction: column;
+    }
+
+    #input_bar {
+        width: 100%;
+    }
+
+    button {
+        height: 50px;
+    }
+
+    #card {
+        padding: 28px 20px;
+    }
+
+    #temperature {
+        font-size: 3.8rem;
+    }
+
+    .details {
+        gap: 5px;
+    }
+
+}
+
+
+/* =========================
+   Subtle Animation
+========================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#card {
+    animation: fadeIn 0.5s ease;
+}

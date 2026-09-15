@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Weather App </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header> Weather App </header>
+        <nav id="search_bar">
+            <input id="input_bar" placeholder="Input a City! ex: Cagayan de Oro" type="text">
+            <button onclick = "getWeather()"> Search </button>
+        </nav>
+        <section id="card">
+            <h2 id="location">Location</h2>
+            <img id="weather_icon" src="" alt="Weather Icon">
+            <p id="temperature"> ?°C </p>
+            <p id="condition"> condition </p>
+            <div class="details">
+                <p> Humidity </p>
+                <p> Wind </p>
+                <p> Feels Like </p>
+                <strong id="humidity"> filler </strong>
+
+                <strong id="wind"> filler </strong>
+
+                <strong id="feelsLike"> ?°C </strong>
+            </div>
+        </section>
+    </body>
+    <script src = "teno.js"></script>
+</html>
