@@ -9,7 +9,7 @@ async function getWeather(){
 
     try{
         const url = 
-        "http://api.weatherapi.com/v1/current.json" + 
+        "https://api.weatherapi.com/v1/current.json" + 
         "&q=" + encodeURIComponent(city);
 
         const response = await fetch(url);
